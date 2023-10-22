@@ -125,6 +125,10 @@ class Bien
     #[ORM\Column(length: 255)]
     private ?string $id_user_saisie = null;
 
+    #[ORM\ManyToOne(inversedBy: 'biens')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?utilisateur $id_user = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -558,6 +562,18 @@ class Bien
     public function setIdUserSaisie(string $id_user_saisie): static
     {
         $this->id_user_saisie = $id_user_saisie;
+
+        return $this;
+    }
+
+    public function getIdUser(): ?utilisateur
+    {
+        return $this->id_user;
+    }
+
+    public function setIdUser(?utilisateur $id_user): static
+    {
+        $this->id_user = $id_user;
 
         return $this;
     }
