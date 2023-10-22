@@ -2,7 +2,7 @@
     <nav class="navbar navbar-hover navbar-expand-lg navbar-soft">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="images/logo-blue-stiky.png" alt="" class="img-fluid">
+                <img src="images/logo-immo.png" alt="" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
                 <span class="navbar-toggler-icon"></span>
@@ -10,26 +10,7 @@
             <div class="collapse navbar-collapse" id="main_nav99">
                 <ul class="navbar-nav  mx-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ path('app_immobilier') }}">Accueil</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Patrimoines </a>
-                        <ul class="dropdown-menu animate fade-up">
-
-                            <li><a class="dropdown-item icon-arrow" href="#">Liste </a>
-                                <ul class="submenu dropdown-menu  animate fade-up">
-                                    <li><a class='dropdown-item' href='/'>Propités</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item icon-arrow" href="#"> Property single detail </a>
-                                <ul class="submenu dropdown-menu  animate fade-up">
-                                    <li><a class='dropdown-item' href='single-detail-v1.html'>Style 1</a></li>
-                                    <li><a class='dropdown-item' href='single-detail-v2.html'>Style 2</a></li>
-                                    <li><a class='dropdown-item' href='single-detail-v3.html'>Style 3</a></li>
-                                    <li><a class='dropdown-item' href='single-detail-v4.html'>Style 4</a></li>
-                                    <li><a class='dropdown-item' href='single-detail-v5.html'>Style 5</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_propriete')}}">Patrimoines</a></li>
 
                     <li class="nav-item "><a class="nav-link" href="{{ path('app_agence') }}">Agence</a></li>
 
