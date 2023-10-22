@@ -9,14 +9,14 @@
             </button>
             <div class="collapse navbar-collapse" id="main_nav99">
                 <ul class="navbar-nav  mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/immobilier">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_immobilier') }}">Accueil</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Patrimoines </a>
                         <ul class="dropdown-menu animate fade-up">
 
                             <li><a class="dropdown-item icon-arrow" href="#">Liste </a>
                                 <ul class="submenu dropdown-menu  animate fade-up">
-                                    <li><a class='dropdown-item' href='listing-style-v1.html'>Propités</a></li>
+                                    <li><a class='dropdown-item' href='/'>Propités</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item icon-arrow" href="#"> Property single detail </a>
@@ -31,7 +31,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item "><a class="nav-link" href="/agence">Agence</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ path('app_agence') }}">Agence</a></li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown"> Blog</a>
@@ -43,7 +43,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class='nav-link' href='contact.html'> contactez nous </a></li>
+                    <li class="nav-item"><a class='nav-link' href='{{ path('app_contactez') }}'> contactez nous </a></li>
                 </ul>
 
 
