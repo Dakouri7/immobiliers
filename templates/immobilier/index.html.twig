@@ -118,15 +118,15 @@
     <!-- END CAROUSEL -->
     <div class="clearfix"></div>
     <div class="search__area bg-light">
+       {{ form_start(form)}}
         <div class="container">
             <div class="search__area-inner">
                 <div class="row">
                     <div class="col-6 col-lg-3 col-md-3">
                         <div class="form-group">
                             <select class="wide select_option">
-                                <option data-display="Property Status">Property Status</option>
-                                <option>For Sale</option>
-                                <option>For Rent</option>
+                                <option data-display="Property Status">Statut de la propriété</option>
+                                {{ form_widget(form.id_statut) }}
 
                             </select>
                         </div>
@@ -134,11 +134,8 @@
                     <div class="col-6 col-lg-3 col-md-3">
                         <div class="form-group">
                             <select class="wide select_option">
-                                <option data-display="Property Type">Property Type</option>
-                                <option>Residential</option>
-                                <option>Commercial</option>
-                                <option>Land</option>
-                                <option>Luxury</option>
+                                <option data-display="Property Type">Type de propriété</option>
+                                {{ {{ form_widget(form.id_type_bien) }}}}
                             </select>
                         </div>
                     </div>
@@ -158,7 +155,7 @@
                     <div class="col-6 col-lg-3 col-md-3">
                         <div class="form-group">
                             <select class="wide select_option">
-                                <option data-display="Locations">Locations</option>
+                                <option data-display="Locations">Pays</option>
                                 <option>United Kingdom</option>
                                 <option>American Samoa</option>
                                 <option>Belgium</option>
@@ -216,6 +213,7 @@
 
             </div>
         </div>
+        {{ form_end()}}
     </div>
 
     <section>
