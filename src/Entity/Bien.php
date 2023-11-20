@@ -20,11 +20,11 @@ class Bien
 
     #[ORM\ManyToOne(inversedBy: 'biens')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Typebien $id_type_bien = null;
+    private ?TypeBien $id_type_bien = null;
 
     #[ORM\ManyToOne(inversedBy: 'biens')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?ville $id_ville = null;
+    private ?Ville $id_ville = null;
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
@@ -127,7 +127,7 @@ class Bien
 
     #[ORM\ManyToOne(inversedBy: 'biens')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?utilisateur $id_user = null;
+    private ?Utilisateur $id_user = null;
 
     public function getId(): ?int
     {
@@ -146,24 +146,24 @@ class Bien
         return $this;
     }
 
-    public function getIdTypeBien(): ?Typebien
+    public function getIdTypeBien(): ?TypeBien
     {
         return $this->id_type_bien;
     }
 
-    public function setIdTypeBien(?Typebien $id_type_bien): static
+    public function setIdTypeBien(?TypeBien $id_type_bien): static
     {
         $this->id_type_bien = $id_type_bien;
 
         return $this;
     }
 
-    public function getIdVille(): ?ville
+    public function getIdVille(): ?Ville
     {
         return $this->id_ville;
     }
 
-    public function setIdVille(?ville $id_ville): static
+    public function setIdVille(?Ville $id_ville): static
     {
         $this->id_ville = $id_ville;
 
@@ -566,12 +566,12 @@ class Bien
         return $this;
     }
 
-    public function getIdUser(): ?utilisateur
+    public function getIdUser(): ?Utilisateur
     {
         return $this->id_user;
     }
 
-    public function setIdUser(?utilisateur $id_user): static
+    public function setIdUser(?Utilisateur $id_user): static
     {
         $this->id_user = $id_user;
 

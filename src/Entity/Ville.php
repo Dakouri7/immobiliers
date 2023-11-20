@@ -20,7 +20,7 @@ class Ville
 
     #[ORM\ManyToOne(inversedBy: 'villes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?pays $id_pays = null;
+    private ?Pays $id_pays = null;
 
     #[ORM\OneToMany(mappedBy: 'id_ville', targetEntity: Bien::class, orphanRemoval: true)]
     private Collection $biens;
@@ -47,12 +47,12 @@ class Ville
         return $this;
     }
 
-    public function getIdPays(): ?pays
+    public function getIdPays(): ?Pays
     {
         return $this->id_pays;
     }
 
-    public function setIdPays(?pays $id_pays): static
+    public function setIdPays(?Pays $id_pays): static
     {
         $this->id_pays = $id_pays;
 
@@ -87,5 +87,10 @@ class Ville
         }
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->getLibVille();
     }
 }

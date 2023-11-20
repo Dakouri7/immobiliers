@@ -6,7 +6,7 @@
 parameters:
     photo_dir: '%kernel.project_dir%/public/assets/upload/'
 services:
-    App\Controller\LogoController:
+    App\Controller\ImmobilierController:
         arguments:
               $managerRegistry: '@doctrine'
 

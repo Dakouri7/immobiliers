@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Bien;
 use App\Entity\TypeBien;
+use App\Entity\Statut;
+use App\Entity\Ville;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -253,11 +255,10 @@ class BienFormType extends AbstractType
             //->add('date_modification')
             //->add('id_user_saisie')
             ->add('id_statut', EntityType::class, [
-                'class' => TypeBien::class,
+                'class' => Statut::class,
                 'placeholder' => 'Choisir un statut',
                 'attr' => [
                     'class' => 'form-control'
-
                 ],
                 'label' => 'statut bien'
             ])

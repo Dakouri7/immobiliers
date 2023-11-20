@@ -72,4 +72,9 @@ class TypeBien
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->getLibTypeBien();
+    }
 }

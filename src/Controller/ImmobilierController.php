@@ -33,7 +33,7 @@ class ImmobilierController extends AbstractController
                 $entityManager->persist($bien);
                 $entityManager->flush();
 
-                //$this->addFlash('success', 'Info concours enregistré avec succès!');
+                $this->addFlash('success', 'Immobilier enregistré avec succès!');
            }
         
             return $this->render('immobilier/index.html.twig', [
