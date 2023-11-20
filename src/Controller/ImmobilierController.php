@@ -36,7 +36,7 @@ class ImmobilierController extends AbstractController
                 //$this->addFlash('success', 'Info concours enregistré avec succès!');
            }
         
-            return $this->render('inf_concours_passe/InfConcoursPasse.html.twig', [
+            return $this->render('immobilier/index.html.twig', [
                 'form' => $form->createView(),
                 'editMode' => $bien->getId() !== null,
                 'biens' => $biens,

@@ -21,6 +21,24 @@ class StatutRepository extends ServiceEntityRepository
         parent::__construct($registry, Statut::class);
     }
 
+    public function save(Statut $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(Statut $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
 //    /**
 //     * @return Statut[] Returns an array of Statut objects
 //     */

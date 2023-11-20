@@ -21,6 +21,24 @@ class PaysRepository extends ServiceEntityRepository
         parent::__construct($registry, Pays::class);
     }
 
+    public function save(Pays $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(Pays $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
 //    /**
 //     * @return Pays[] Returns an array of Pays objects
 //     */

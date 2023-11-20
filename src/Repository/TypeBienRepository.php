@@ -21,6 +21,25 @@ class TypeBienRepository extends ServiceEntityRepository
         parent::__construct($registry, TypeBien::class);
     }
 
+    public function save(TypeBien $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(TypeBien $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+
 //    /**
 //     * @return TypeBien[] Returns an array of TypeBien objects
 //     */

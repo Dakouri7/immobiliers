@@ -21,6 +21,24 @@ class BienRepository extends ServiceEntityRepository
         parent::__construct($registry, Bien::class);
     }
 
+    public function save(Bien $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(Bien $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
 //    /**
 //     * @return Bien[] Returns an array of Bien objects
 //     */
